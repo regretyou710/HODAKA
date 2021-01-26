@@ -1,4 +1,4 @@
-package 每日生產報表檢查;
+package ReportCheck;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,14 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import DBConnect.DBFactory;
-import 每日生產報表檢查.tw.com.bean.Message;
+import ReportCheck.tw.com.bean.Message;
 
-public class ReportCheck {
+public class ReportCheckMethod {
 	private static Connection conn = null;
 	private static Logger logger = null;
 
@@ -28,7 +27,7 @@ public class ReportCheck {
 			Properties properties = new Properties();
 
 			// 使用ClassLoader載入properties配置檔案生成對應的輸入流
-			InputStream is = 每日生產報表檢查Testing.class.getClassLoader().getResourceAsStream("每日生產報表檢查/connectConfig.properties");
+			InputStream is = ReportCheckMethod.class.getClassLoader().getResourceAsStream("connectConfig.properties");
 
 			// 使用properties物件載入輸入流
 			properties.load(is);
@@ -38,6 +37,10 @@ public class ReportCheck {
 			String DBName = properties.getProperty("DBName_1");
 			String username = properties.getProperty("username_1");
 			String password = properties.getProperty("password_1");
+			logger.debug("host:" + host);
+			logger.debug("DBName:" + DBName);
+			logger.debug("username:" + username);
+			logger.debug("password:" + password);
 			conn = DBFactory.getOracleDBConnection(host, DBName, username, password);
 		} catch (IOException e) {
 			logger.error("IO執行錯誤=>" + e.getMessage());
@@ -45,7 +48,7 @@ public class ReportCheck {
 		}
 	}
 
-	private ReportCheck() {
+	private ReportCheckMethod() {
 
 	}
 

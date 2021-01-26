@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
 	<properties>
-		<property name="LOG_HOME">D:/logs</property>
+		<property name="LOG_HOME">./logs</property>
 		<property name="FILE_NAME">每日生產報表檢查日誌</property>
 	</properties>
 	<Appenders>

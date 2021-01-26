@@ -1,4 +1,4 @@
-package 每日生產報表檢查.tw.com.bean;
+package ReportCheck.tw.com.bean;
 
 import java.io.Serializable;
 
