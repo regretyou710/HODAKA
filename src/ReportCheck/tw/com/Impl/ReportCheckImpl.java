@@ -48,6 +48,8 @@ public class ReportCheckImpl implements IReportCheck {
 			version = new Version();
 			String sql = "SELECT * FROM XX_REPORTCHECK_VER ORDER BY VERNUM "
 					+ "OFFSET (SELECT COUNT(*) from XX_REPORTCHECK_VER)-1 ROWS FETCH NEXT 1 ROWS ONLY";
+			//另一種寫法
+			//String sql = "SELECT * FROM XX_REPORTCHECK_VER WHERE ROWNUM = 1 ORDER BY VERNUM DESC";
 
 			v2 = version.getVerNumQuery(version.getConn(), sql);
 		} catch (IOException e) {
