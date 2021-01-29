@@ -57,8 +57,7 @@ public class Version extends VersionCompareUtilImpl {
 	}
 
 	@Override
-	public String getVerNumQuery(Connection conn, String sqlStr) {
-		Logger logger = LogManager.getLogger("RollingRandomAccessFileLogger");
+	public String getVerNumQuery(Connection conn, String sqlStr) {		
 		String verNum = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -108,7 +107,7 @@ public class Version extends VersionCompareUtilImpl {
 			}
 			
 			// 自定義的格式
-			DateTimeFormatter ofPattern = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss");
+			DateTimeFormatter ofPattern = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 			String dateTime = ofPattern.format(LocalDateTime.now());
 			
 			pstmt.setString(1, uuid);
