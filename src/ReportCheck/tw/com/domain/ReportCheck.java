@@ -1,8 +1,8 @@
-package ReportCheck.tw.com.bean;
+package ReportCheck.tw.com.domain;
 
 import java.io.Serializable;
 
-public class Message implements Serializable {
+public class ReportCheck implements Serializable {
 
 	/**
 	 * 
@@ -11,7 +11,7 @@ public class Message implements Serializable {
 	private String txndate;
 	private int count;
 
-	public Message() {
+	public ReportCheck() {
 
 	}
 
@@ -31,4 +31,9 @@ public class Message implements Serializable {
 		this.count = count;
 	}
 
+	@Override
+	public String toString() {
+		return "Message [txndate=" + txndate + ", count=" + count + "]";
+	}
+	
 }

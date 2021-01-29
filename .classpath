@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="lib/log4j-api-2.14.0.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-core-2.14.0.jar"/>
 	<classpathentry kind="lib" path="lib/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="lib/resourcefileloader.jar" sourcepath="D:/Program Files/myeclipse2017code/Demo_Java_JavaDemos/src"/>
+	<classpathentry kind="lib" path="lib/versioncompare.jar" sourcepath="D:/Program Files/myeclipse2017code/Demo_Java_JavaDemos"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

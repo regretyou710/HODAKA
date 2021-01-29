@@ -28,4 +28,10 @@ public class SQLString implements Serializable {
 	public void setSql(String sql) {
 		this.sql = sql;
 	}
+
+	@Override
+	public String toString() {
+		return "SQLString [reportName=" + reportName + ", sql=" + sql + "]";
+	}
+
 }
