@@ -11,16 +11,16 @@
 		<RollingRandomAccessFile name="ReportCheckExeFile"
 			fileName="${LOG_HOME}/${REPORTCHECKFILE_NAME}.log"
 			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${REPORTCHECKFILE_NAME}_%d{MMddHHmm}_%i.log">
-			<PatternLayout charset="UTF-8" pattern="[%d{yyyy/MM/dd HH:mm:ss}] %m%n"/>
+			<PatternLayout charset="UTF-8" pattern="[%d{yyyy/MM/dd HH:mm:ss}] %m%n" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" />
 				<SizeBasedTriggeringPolicy size="10 MB" />
 			</Policies>
 			<DefaultRolloverStrategy max="20" />
-		</RollingRandomAccessFile>		
+		</RollingRandomAccessFile>
 		<Async name="AsyncAppender" includeLocation="true">
 			<AppenderRef ref="ReportCheckExeFile" />
-		</Async>		
+		</Async>
 	</Appenders>
 	<Loggers>
 		<Logger name="RollingRandomAccessFileLogger" level="info"
